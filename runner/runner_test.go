@@ -348,7 +348,7 @@ func TestDoScrapeSkipsEveryDisabledEndpoint(t *testing.T) {
 }
 
 func TestEndpointHandlersReturnPrepareTuple(t *testing.T) {
-	var handlers = []func(*Runner, context.Context, scraper.Requestor, int64) (int, error){
+	handlers := []func(*Runner, context.Context, scraper.Requestor, int64) (int, error){
 		(*Runner).handleServers,
 		(*Runner).handleVarz,
 		(*Runner).handleConnz,
